@@ -10,7 +10,7 @@ function App() {
           src={logo}
           className="App-logo"
           alt="logo"
-          style="border-radius: 50%"
+          style={{ borderRadius: "50%" }}
         />
         <p>COMING SOON: Robert Cereghini</p>
         <a
