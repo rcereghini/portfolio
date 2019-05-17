@@ -6,17 +6,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <img
+          src={logo}
+          className="App-logo"
+          alt="logo"
+          style="border-radius: 50%"
+        />
+        <p>COMING SOON: Robert Cereghini</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="www.rcereghini.github.io"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          View Old Portfolio
         </a>
       </header>
     </div>
