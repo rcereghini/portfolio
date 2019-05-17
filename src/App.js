@@ -13,7 +13,11 @@ function App() {
           style={{ borderRadius: "50%" }}
         />
         <p>COMING SOON: Robert Cereghini</p>
-        <a className="App-link" href="rcereghini.github.io" target="_blank">
+        <a
+          className="App-link"
+          href="https://rcereghini.github.io/"
+          target="_blank"
+        >
           Old Portfolio
         </a>
       </header>
