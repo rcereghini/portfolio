@@ -15,11 +15,11 @@ function App() {
         <p>COMING SOON: Robert Cereghini</p>
         <a
           className="App-link"
-          href="www.rcereghini.github.io"
+          href="rcereghini.github.io"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Old Portfolio
+          Old Portfolio
         </a>
       </header>
     </div>
