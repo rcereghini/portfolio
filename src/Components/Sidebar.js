@@ -1,45 +1,31 @@
-import React, { Component, Fragment } from "react";
-import bob from "../bob.jpeg";
-import "./sidebar.css";
+import React, { useState } from 'react';
+import Nav from './Nav';
+import { Link } from 'gatsby';
+export default function SideBar({ fullMenu }) {
+  const [headerOpen, toggleHeader] = useState(false);
+  return (
+    <>
+      <header id="header" className={`${fullMenu ? '' : 'alt'}`}>
+        <h1>
+          <Link to="/">Solid State</Link>
+        </h1>
 
-class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  componentDidMount() {
-    console.log("hi");
-  }
-
-  componentWillUnmount() {}
-
-  render() {
-    return (
-      <Fragment>
-        <div className="mainDiv">
-          <img
-            src={bob}
-            style={{
-              borderRadius: "50%",
-              margin: "1em auto",
-              boxShadow: "0px 0px 10px 0px white"
+        <nav>
+          <a
+            href="#menu"
+            onClick={e => {
+              e.preventDefault();
+              toggleHeader(!headerOpen);
             }}
-          />
-          <ul>
-            <li>Top</li>
-            <li>Languages</li>
-            <li>Frameworks</li>
-            <li>Libraries</li>
-            <li>Samples</li>
-            <li>Education</li>
-            <li>About Me</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-      </Fragment>
-    );
-  }
+            className="menuToggle"
+          >
+            <span>Menu</span>
+          </a>
+        </nav>
+      </header>
+      <div className={`${headerOpen ? 'is-menu-visible' : ' '}`}>
+        <Nav onMenuToggle={() => toggleHeader(!headerOpen)} />
+      </div>
+    </>
+  );
 }
-
-export default Sidebar;
